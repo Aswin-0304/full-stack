@@ -1,0 +1,490 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f6fb;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1d2433;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+  background: linear-gradient(
+    120deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584
+  );
+
+  color: white;
+  padding: 35px 20px;
+}
+
+.header-content {
+  max-width: 1180px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+
+  background: rgba(255, 255, 255, 0.18);
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.header h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+}
+
+.header p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ================= LAYOUT ================= */
+
+.container {
+  max-width: 1180px;
+  margin: 35px auto;
+  padding: 0 20px;
+}
+
+.dashboard-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 2fr)
+    minmax(280px, 1fr);
+
+  gap: 25px;
+
+  align-items: start;
+}
+
+.main-content,
+.sidebar {
+  min-width: 0;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* ================= CARDS ================= */
+
+.card {
+  background: white;
+
+  border: 1px solid #e5e8ef;
+
+  border-radius: 18px;
+
+  padding: 25px;
+
+  margin-bottom: 25px;
+
+  box-shadow:
+    0 10px 30px rgba(31, 38, 135, 0.07);
+}
+
+.sidebar .card {
+  margin-bottom: 0;
+}
+
+.card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 25px;
+}
+
+.card-heading h2 {
+  margin: 3px 0 0;
+  font-size: 24px;
+}
+
+.eyebrow {
+  margin: 0;
+
+  font-size: 12px;
+  font-weight: bold;
+
+  letter-spacing: 1.5px;
+
+  color: #6c5ce7;
+}
+
+/* ================= FORM ================= */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #4d5668;
+}
+
+select,
+textarea,
+input {
+  width: 100%;
+
+  border: 1px solid #d9deea;
+
+  border-radius: 10px;
+
+  padding: 13px 14px;
+
+  background: #fafbfe;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: 0.2s;
+}
+
+select:focus,
+textarea:focus,
+input:focus {
+  border-color: #6c5ce7;
+
+  background: white;
+
+  box-shadow:
+    0 0 0 3px rgba(108, 92, 231, 0.1);
+}
+
+textarea {
+  min-height: 140px;
+
+  resize: vertical;
+
+  line-height: 1.6;
+}
+
+.character-count {
+  margin-top: 7px;
+
+  text-align: right;
+
+  font-size: 12px;
+
+  color: #8a93a5;
+}
+
+/* ================= BUTTONS ================= */
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.publish-btn {
+  width: 100%;
+
+  padding: 14px 20px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    90deg,
+    #5851db,
+    #833ab4,
+    #c13584
+  );
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  transition: 0.2s;
+}
+
+.publish-btn:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 20px rgba(131, 58, 180, 0.25);
+}
+
+.delete-btn {
+  padding: 9px 15px;
+
+  border: 1px solid #ffdddd;
+
+  border-radius: 8px;
+
+  background: #fff4f4;
+
+  color: #e74c3c;
+
+  font-weight: 600;
+}
+
+.delete-btn:hover {
+  background: #e74c3c;
+  color: white;
+}
+
+/* ================= POSTS ================= */
+
+.posts-list {
+  border: 1px solid #edf0f5;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+}
+
+.post-item {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 18px;
+
+  border-bottom: 1px solid #edf0f5;
+}
+
+.post-item:last-child {
+  border-bottom: none;
+}
+
+.post-information {
+  min-width: 0;
+}
+
+.post-information p {
+  margin: 10px 0 0;
+
+  line-height: 1.5;
+
+  overflow-wrap: anywhere;
+}
+
+.post-count {
+  background: #f0edff;
+
+  color: #6c5ce7;
+
+  padding: 7px 12px;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* ================= PLATFORM BADGES ================= */
+
+.platform-badge {
+  display: inline-block;
+
+  padding: 7px 12px;
+
+  border-radius: 20px;
+
+  color: white;
+
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.instagram {
+  background: linear-gradient(
+    45deg,
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf
+  );
+}
+
+.facebook {
+  background: #1877f2;
+}
+
+.linkedin {
+  background: #0a66c2;
+}
+
+.twitter {
+  background: #111111;
+}
+
+.youtube {
+  background: #ff0000;
+}
+
+.threads {
+  background: #222222;
+}
+
+.custom {
+  background: #6c5ce7;
+}
+
+/* ================= PLATFORM MANAGER ================= */
+
+.platform-list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-bottom: 22px;
+}
+
+.platform-chip {
+  padding: 9px 12px;
+
+  background: #f2f4f8;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+}
+
+.add-platform {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.add-platform button {
+  padding: 12px;
+
+  border-radius: 9px;
+
+  background: #6c5ce7;
+
+  color: white;
+
+  font-weight: bold;
+}
+
+.add-platform button:hover {
+  background: #5948d6;
+}
+
+/* ================= INFO ================= */
+
+.info-card {
+  padding: 24px;
+
+  border-radius: 18px;
+
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    #405de6,
+    #833ab4
+  );
+}
+
+.info-card span {
+  font-size: 12px;
+  font-weight: bold;
+
+  opacity: 0.8;
+}
+
+.info-card h3 {
+  margin: 10px 0;
+}
+
+.info-card p {
+  margin: 0;
+
+  line-height: 1.6;
+
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ================= EMPTY ================= */
+
+.empty-state {
+  text-align: center;
+
+  padding: 35px;
+
+  background: #fafbfe;
+
+  border-radius: 12px;
+
+  color: #7d8597;
+}
+
+.empty-state h3 {
+  margin-top: 0;
+
+  color: #343b4a;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 850px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header h1 {
+    font-size: 25px;
+  }
+
+  .post-item {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .delete-btn {
+    width: 100%;
+  }
+}
